@@ -39,9 +39,11 @@ A user can have multiple actions which leads to multiple entries for a user, we 
 
 We trained three different models on the dataset (smaller) which are Random Forest, Support Vector Machines and Gradient Boosted Trees respectively. We compared the performance between the three models and evaluation metrics consist two main parameter; f1-score and accuracy. 
 Gradient Boosted Trees outperformed the rest by a large margin but at a some time it took largest amount of comupatation time. Due to this, I chose Random Fores Classifier as training model. 
-Observation from 1st attempt of trainign and prediction:
-The F-1 Score is 0.76
-The accuracy is 0.706
+
+*Observation from 1st attempt of trainign and prediction:
+ 
+  The F-1 Score is 0.76
+  The accuracy is 0.706
 
 I then tuned the model and final observations are:
 
