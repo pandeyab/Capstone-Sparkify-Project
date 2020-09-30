@@ -42,8 +42,9 @@ Gradient Boosted Trees outperformed the rest by a large margin but at a some tim
 
 *Observation from 1st attempt of trainign and prediction:
  
-  The F-1 Score is 0.76
-  The accuracy is 0.706
+  The F-1 Score is 0.76 ;
+  The accuracy is 0.706 ;
+
 
 I then tuned the model and final observations are:
 
