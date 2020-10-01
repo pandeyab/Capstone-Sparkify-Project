@@ -29,14 +29,15 @@ We recommend students install [Anaconda](https://www.continuum.io/downloads), a 
 
 ## Project Motivation <a name="motivation"></a>
 
-The main aim of this project to predict the users churning from Sparkify app, which is a music app just like spotify. Many users listen songs  with either free account or paid acount. many users leve the service as well and Sparkify has a large dataset of log files containing all this information. From the log files from Sparkify, we need to take a smaller size of data set and manipulate it with Spark to engineer some relevant features. 
-With this we will able to predict the churning of users and it could tell the users properties who are churning out off Sparkify and that will halp the streaming company to design thier app and business accordingly.
+The main aim of this project to predict the users churning from Sparkify music streaming service, which is a music app just like spotify. Many users listen songs  with either free account or paid acount. Many users leave the service as well and Sparkify has a large dataset of log files containing all this information. From the log files, we need to take a smaller size of data set and manipulate it with Spark to engineer some relevant features. 
+With this we will able to predict the churning of users and it could tell the users properties who are churning out off Sparkify and that will halp the streaming company to design thier app and business accordingly in order to prevent the churn.
 
 ### Files Description <a name = "files"></a>
 
-*Sparkify.ipynb* is the main notebook where we do all the preprocessing, feature engineering and modelling.
+*Sparkify.ipynb* - main workspace where all the project work are done such as EDA, Feature Engg, Modeling and Tuning to get the Churn Prediction Engine.
 
 ### Process <a name = "prcoess"></a>
+
 1. EDA and Feature Engineering : 
 
    After doing cleaning and exploratory data analysis (exploring raw data and prepared the data)I moved to next step : feature engineering. 
@@ -67,20 +68,13 @@ With this we will able to predict the churning of users and it could tell the us
 I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters.
 
 Below are the results:
-	The metrics for Random Forest Classifier are :
-	The F-1 Score is 0.72
-	The accuracy is 0.6743123543123543
-	Time taken : 144.28 sec
+	TThe accuracy for Random Forest Classifier is 0.72
+	The F-1 Score for Random Forest Classifier is 0.6743123543123543
+	Time taken : 590.4870953559875
 	
-	The metrics for Logical Regression classifier are: 
-	The F-1 Score is 0.84
-	The accuracy is 0.833015873015873
-	Time taken : 887.008 sec
 	
-	The metrics for Gradient Boosted Trees Classifier are: 
-	The F-1 Score is 0.72
-	The accuracy is 0.7146666666666667
-	Time taken : 786.54 sec
+	
+
 	
 In above results from 3 different methods we could see that the f1-score and accuracy of Logical Regression method is better compared to other 2. But it took a lot of computation time than others. It will be more if the size of dataset is larger.
 Logical Regression took more computation time compared to others but its accuracy and f1-socre is competitive. So we will proceed with LR and will try to tune this model.
