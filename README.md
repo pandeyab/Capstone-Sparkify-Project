@@ -50,9 +50,11 @@ With this we will able to predict the churning of users and it could tell the us
 
    Once I had the necessary aggregated features, my next goal was to develop model for churn prediction.
    For that reason I did some experiment and chose 3 algorithms for training and prediction.
+    
     Random Forest Classification
-    Logical regression
+    Logistic Regression
     Gradient Boosting
+    
    I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters. And trained our 3 
    models on train data and done the prediction.
 
