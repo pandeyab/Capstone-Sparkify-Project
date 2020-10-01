@@ -7,8 +7,9 @@ Udacity DSND project 7 - Capstone Sparkify project
 1. [Installation](#installation)
 2. [Project Motivation](#motivation)
 3. [Files Description](#files)
-4. [Results](#results)
-5. [Licensing, Authors, and Acknowledgements](#licensing)
+4. [Process](#process)
+5. [Results](#results)
+6. [Licensing, Authors, and Acknowledgements](#licensing)
 
 
 ## Installation <a name="installation"></a>
@@ -35,22 +36,55 @@ With this we will able to predict the churning of users and it could tell the us
 
 *Sparkify.ipynb* is the main notebook where we do all the preprocessing, feature engineering and modelling.
 
+### Process <a name = "prcoess"></a>
+1. EDA and Feature Engineering
+   After doing cleaning and exploratory data analysis (exploring raw data and prepared the data)I moved to next step : feature engineering. 
+   In feature engineering, my main aim is to building out the features which I found promising to train the models by extracting them from EDA. Here I created some 
+   new features based on existing feature because I felt that these features will have the necessary and missing information which will be important for Machine Learning 
+   model development. 
+   Next, I aggregated the features by doing vectorization then standardizing input features by doing scaling operation of them all.
+
+2. Modeling
+   Once I had the necessary aggregated features, my next goal was to develop model for churn prediction.
+   For that reason I did some experiment and chose 3 algorithms for training and prediction.
+    Random Forest Classification
+    Logical regression
+    Gradient Boosting
+   I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters. And trained our 3 
+   models on train data and done the prediction.
+
+3. Tuning
+   Later I tuned the LR model for improvement.
+   
 ### Results <a name = "results"></a>
 
-I seprated the json file in training and test set. For training on data set (smaller), I chose these 3 models : Random Forest, Logistic regression and Gradient Boosted Trees. I compared the performance between the three models and evaluation metrics consist two main parameter; f1-score and accuracy. 
-Gradient Boosted Trees performed better if I take accuracy in consideration  han the rest models but at a same time it took longest amount of comupatation time. Due to this, I chose Random Fores Classifier as training model which F1-score and accuracy socre is pretty competitive.
+I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters.
 
-*Observation from 1st attempt of training and prediction:
- 
-  The F-1 Score is 0.76 ;
-  The accuracy is 0.706 ;
+Below are the results:
+	The metrics for Random Forest Classifier are :
+	The F-1 Score is 0.72
+	The accuracy is 0.6743123543123543
+	Time taken : 144.28 sec
+	
+	The metrics for Logical Regression classifier are: 
+	The F-1 Score is 0.84
+	The accuracy is 0.833015873015873
+	Time taken : 887.008 sec
+	
+	The metrics for Gradient Boosted Trees Classifier are: 
+	The F-1 Score is 0.72
+	The accuracy is 0.7146666666666667
+	Time taken : 786.54 sec
+	
+In above results from 3 different methods we could see that the f1-score and accuracy of Logical Regression method is better compared to other 2. But it took a lot of computation time than others. It will be more if the size of dataset is larger.
+Logical Regression took more computation time compared to others but its accuracy and f1-socre is competitive. So we will proceed with LR and will try to tune this model.
+
+Later, I tuned the model Logical Regression with some changes and below are the final result:
 
 
-I then tuned the model and final observations are:
-  The F-1 Score is 0.76
-  The accuracy is 0.7326315789473684
 
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
- Udacity
+ Udacity has the final lcensing on this project and Sparkify.com for dataset. 
+ I would like to thanks Udacity for providing this interesting project to work on.
 
