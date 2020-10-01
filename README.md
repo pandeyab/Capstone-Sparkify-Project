@@ -60,29 +60,34 @@ With this we will able to predict the churning of users and it could tell the us
 
    Later I tuned the LR model for improvement.
    
-   
-   
    .
 ### Results <a name = "results"></a>
 
 I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters.
 
 Below are the results:
-	TThe accuracy for Random Forest Classifier is 0.72
-	The F-1 Score for Random Forest Classifier is 0.6743123543123543
-	Time taken : 590.4870953559875
+	F1 Score for Random Forest Classifier is 0.6435087719298245
+	The accuracy for Random Forest Classifier is 0.68
+	Time taken : 295.40548968315125 sec
+	
+	F1 Score for Logistic Regression is 0.6743123543123543
+	The accuracy for Logistic Regression is 0.72
+	Time taken : 130.5927119255066 sec
+	
+	F1 Score for Gradient Boosted Trees is 0.613056133056133
+	The accuracy for Gradient Boosted Trees is 0.64
+	Time taken : 786.54 sec
 	
 	
-	
+In above results from 3 different methods we could see that the f1-score and accuracy of Logistic Regression method is better compared to other 2. And it took lesser time in training and predicting. But It will be more if the size of dataset is larger.
+Other 2 methods took more computation time compared to LR and also F1 score of those are also lesser than LR . So we will proceed with LR and will try to tune this model.
 
-	
-In above results from 3 different methods we could see that the f1-score and accuracy of Logical Regression method is better compared to other 2. But it took a lot of computation time than others. It will be more if the size of dataset is larger.
-Logical Regression took more computation time compared to others but its accuracy and f1-socre is competitive. So we will proceed with LR and will try to tune this model.
-
-Later, I tuned the model Logical Regression with some changes and below are the final result:
+Later, I tried to use GridCV to tune and optimize the LR and improve the overall Churn prediction model. I used ParamGridBuilder and CrossValidator to set up Grid-Search Cross-Validation for analysis.
+In LR method, to avoid overfitting, I considered to tune “elasticNetParam” and “regParam”.
 
 
-
+I published the finding at below location:
+https://medium.com/@abhis197/user-churn-prediction-for-sparkify-udacity-dsnd-capstone-project-a6ef6f21a7c6
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
  Udacity has the final lcensing on this project and Sparkify.com for dataset. 
