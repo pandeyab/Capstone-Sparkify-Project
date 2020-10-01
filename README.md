@@ -37,14 +37,16 @@ With this we will able to predict the churning of users and it could tell the us
 *Sparkify.ipynb* is the main notebook where we do all the preprocessing, feature engineering and modelling.
 
 ### Process <a name = "prcoess"></a>
-1. EDA and Feature Engineering
+1. EDA and Feature Engineering : 
+
    After doing cleaning and exploratory data analysis (exploring raw data and prepared the data)I moved to next step : feature engineering. 
    In feature engineering, my main aim is to building out the features which I found promising to train the models by extracting them from EDA. Here I created some 
    new features based on existing feature because I felt that these features will have the necessary and missing information which will be important for Machine Learning 
    model development. 
    Next, I aggregated the features by doing vectorization then standardizing input features by doing scaling operation of them all.
 
-2. Modeling
+2. Modeling :
+
    Once I had the necessary aggregated features, my next goal was to develop model for churn prediction.
    For that reason I did some experiment and chose 3 algorithms for training and prediction.
     Random Forest Classification
@@ -53,9 +55,13 @@ With this we will able to predict the churning of users and it could tell the us
    I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters. And trained our 3 
    models on train data and done the prediction.
 
-3. Tuning
+3. Tuning :
+
    Later I tuned the LR model for improvement.
    
+   
+   
+   .
 ### Results <a name = "results"></a>
 
 I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters.
