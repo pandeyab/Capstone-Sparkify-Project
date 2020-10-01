@@ -82,7 +82,7 @@ Below are the results:
 In above results from 3 different methods we could see that the f1-score and accuracy of Logistic Regression method is better compared to other 2. And it took lesser time in training and predicting. But It will be more if the size of dataset is larger.
 Other 2 methods took more computation time compared to LR and also F1 score of those are also lesser than LR . So we will proceed with LR and will try to tune this model.
 
-Later, I tried to use GridCV to tune and optimize the LR and improve the overall Churn prediction model. I used ParamGridBuilder and CrossValidator to set up Grid-Search Cross-Validation for analysis.
+Later, I tried to use GridCV to tune and optimize the LR and improve the overall Churn prediction model. I used ParamGridBuilder and CrossValidator while setting Grid-Search Cross-Validation to train and tune the model.
 In LR method, to avoid overfitting, I considered to tune “elasticNetParam” and “regParam”.
 
 
