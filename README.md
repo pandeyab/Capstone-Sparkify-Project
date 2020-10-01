@@ -66,6 +66,7 @@ With this we will able to predict the churning of users and it could tell the us
 I split full dataset into training and test data and perform these algorithm one by one. Accuracy and F1- score were the two evaluation parameters.
 
 Below are the results:
+
 	F1 Score for Random Forest Classifier is 0.6435087719298245
 	The accuracy for Random Forest Classifier is 0.68
 	Time taken : 295.40548968315125 sec
