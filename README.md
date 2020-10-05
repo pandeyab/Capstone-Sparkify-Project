@@ -74,21 +74,23 @@ I split full dataset into training and test data and perform these algorithm one
 
 Below are the results:
 
-	F1 Score for Random Forest Classifier is 0.6350135501355014
-	The accuracy for Random Forest Classifier is 0.72
-	Time taken : 298.2291057109833 sec
 
+	F1 Score for Random Forest Classifier is 0.706
+	The accuracy for Random Forest Classifier is 0.76
+	Time taken : 297.50581884384155 sec
+	
 	F1 Score for Logistic Regression is 0.9592380952380952
 	The accuracy for Logistic Regression is 0.96
-	Time taken : 312.0639657974243 sec
-
+	Time taken : 323.0742998123169 sec
+	
 	F1 Score for Gradient Boosted Trees is 0.613056133056133
 	The accuracy for Gradient Boosted Trees is 0.64
-	Time taken : 445.27667784690857 sec
+	Time taken : 435.00629568099976 sec
 	
 	
 In above results from 3 different methods we could see that the f1-score and accuracy of Logistic Regression method is much much better compared to other 2. It however took a bit more training and prediction time than Random Forest method. It will be taking more computation time if the size of dataset is larger.
-Next step is to tune and optimize all these 3 models and see how do they fare with respect to accuracy and F1-score. I will compare the result of all tuned model again and see which one is doing better.
+Next step is to tune and optimize Random Forest and Gradient Boosting Tree models and see how do they fare with respect to accuracy and F1-score metrics of Logistic Regression output. I will compare the result of tuned model against LR and see which one is doing better.
+As of now LR is performing way better than other 2 models.
 
 In this section I tried tune all the models. 1st I started with Random forest where I used GridSearch and implemented impurity measures by using 'gini' and 'entropy'. Result is not yet so impressive. But It can be improved by experimenting different hyperparameters.
 
