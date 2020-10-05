@@ -111,10 +111,15 @@ In this section I tried to tune hyperparameters of Random Forest Classifier and 
 	
 
 later I tuned hyperparameters to Gradient Boosted tree method.
+	
+	The accuracy for tuned Gradient Boosted tree is 0.72
+	The F-1 Score for tuned Gradient Boosted tree is 0.6743123543123543
 
+In the end I can see Logistic Regression performed much better than other 2 algorithms. 
+It produces Accuracy and F1 Score of 96% approx. Since the engineered features were less, approx 225, it is still difficult to say that this conclusion will stand true in general. It might changes with large dataset but still the winner among three selected models is Logistic Regression for this project.
 
-I published the finding at below location:
-https://medium.com/@abhis197/user-churn-prediction-for-sparkify-udacity-dsnd-capstone-project-a6ef6f21a7c6
+I published the findings at below location:
+https://medium.com/@abhis197/user-churn-prediction-for-sparkify-udacity-dsnd-capstone-project-a6ef6f21a7c6 
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
  Udacity has the final lcensing on this project and Sparkify.com for dataset. 
