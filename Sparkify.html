@@ -13143,7 +13143,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import libraries</span>
@@ -13179,7 +13179,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a Spark session</span>
@@ -13196,52 +13196,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sparkContext</span><span class="o">.</span><span class="n">getConf</span><span class="p">()</span><span class="o">.</span><span class="n">getAll</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;spark.driver.host&#39;, &#39;d67720d86921&#39;),
- (&#39;spark.rdd.compress&#39;, &#39;True&#39;),
- (&#39;spark.app.name&#39;, &#39;Udacity_DSND_Capstone_Sparkify_project&#39;),
- (&#39;spark.serializer.objectStreamReset&#39;, &#39;100&#39;),
- (&#39;spark.master&#39;, &#39;local[*]&#39;),
- (&#39;spark.executor.id&#39;, &#39;driver&#39;),
- (&#39;spark.submit.deployMode&#39;, &#39;client&#39;),
- (&#39;spark.driver.port&#39;, &#39;46579&#39;),
- (&#39;spark.ui.showConsoleProgress&#39;, &#39;true&#39;),
- (&#39;spark.app.id&#39;, &#39;local-1601562773562&#39;)]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">sparkContext</span><span class="o">.</span><span class="n">getConf</span><span class="p">()</span><span class="o">.</span><span class="n">getAll</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13258,6 +13216,48 @@ div#notebook {
 
 
 
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(&#39;spark.driver.host&#39;, &#39;87ebb530ac53&#39;),
+ (&#39;spark.rdd.compress&#39;, &#39;True&#39;),
+ (&#39;spark.app.name&#39;, &#39;Udacity_DSND_Capstone_Sparkify_project&#39;),
+ (&#39;spark.app.id&#39;, &#39;local-1601882840891&#39;),
+ (&#39;spark.serializer.objectStreamReset&#39;, &#39;100&#39;),
+ (&#39;spark.master&#39;, &#39;local[*]&#39;),
+ (&#39;spark.executor.id&#39;, &#39;driver&#39;),
+ (&#39;spark.submit.deployMode&#39;, &#39;client&#39;),
+ (&#39;spark.driver.port&#39;, &#39;45773&#39;),
+ (&#39;spark.ui.showConsoleProgress&#39;, &#39;true&#39;)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
 <div class="output_html rendered_html output_subarea output_execute_result">
 
             <div>
@@ -13266,7 +13266,7 @@ div#notebook {
         <div>
             <p><b>SparkContext</b></p>
 
-            <p><a href="http://d67720d86921:4040">Spark UI</a></p>
+            <p><a href="http://87ebb530ac53:4040">Spark UI</a></p>
 
             <dl>
               <dt>Version</dt>
@@ -13298,7 +13298,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="s2">&quot;mini_sparkify_event_data.json&quot;</span><span class="p">)</span>
@@ -13349,7 +13349,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -13365,7 +13365,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13382,7 +13382,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13423,7 +13423,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_df</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -13439,7 +13439,7 @@ only showing top 5 rows
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13456,7 +13456,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#users with blank user id</span>
@@ -13499,7 +13499,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#dropping NA vales from user id and session id , dropping empty values from the user id </span>
@@ -13514,7 +13514,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#number of rows and columns</span>
@@ -13532,7 +13532,7 @@ only showing top 5 rows
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13549,7 +13549,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Converting to pandas dataframe</span>
@@ -13566,7 +13566,7 @@ only showing top 5 rows
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13738,7 +13738,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#function for cancellation confirmation, i/p 1 if canclled</span>
@@ -13765,7 +13765,7 @@ only showing top 5 rows
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13933,7 +13933,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#updating registration and timestamp by creating new columns</span>
@@ -13955,7 +13955,7 @@ only showing top 5 rows
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -14136,7 +14136,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s1">&#39;userID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Churn&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14175,7 +14175,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;userID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14216,7 +14216,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
@@ -14269,7 +14269,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Genderwise churn effect analysis</span>
@@ -14296,13 +14296,13 @@ only showing top 5 rows
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f6e8b381748&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f02b32bae80&gt;</pre>
 </div>
 
 </div>
@@ -14336,7 +14336,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plotting the distribution for number of songs played per session for churned and normal users</span>
@@ -14365,7 +14365,7 @@ only showing top 5 rows
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmIAAAHjCAYAAACAUnMGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAG/JJREFUeJzt3X20XXV95/HPV56CiCKQCpJiQoeiUARJKJZaoDhUkPJgR1RaWyx2sqpVmLYKjm3V6qxZlbqmZXVNVabYQQdBRRGfRssS0FItbaIozwUtYjCBAOIQJTSB3/xxTzCFYO4J5+R377mv11qse/a+5+F7/SPr7W/vs3e11gIAwNb3lN4DAADMVUIMAKATIQYA0IkQAwDoRIgBAHQixAAAOhFiAACdCDEAgE6EGABAJ9v2HmC6dt9997Zw4cLeYwAAbNby5cvvaa3N39zzZk2ILVy4MMuWLes9BgDAZlXVd6bzPIcmAQA6EWIAAJ0IMQCATmbNOWIAwORbt25dVqxYkbVr1/YeZVrmzZuXBQsWZLvtttui1wsxAGDGWLFiRXbeeecsXLgwVdV7nJ+otZZ77703K1asyKJFi7boPRyaBABmjLVr12a33Xab8RGWJFWV3Xbb7Umt3gkxAGBGmQ0RtsGTnVWIAQB0IsQAgDnpNa95TS655JKuMwgxAIBpWL9+/cjfU4gBADPeu971rjz3uc/NMccck1NPPTXvec978q1vfSvHHntsFi9enF/6pV/KzTffnGRqpeuMM87I4Ycfnn322efRVa/WWt7whjdk//33z/HHH5+777770fdfvnx5jjzyyCxevDgveclLsnLlyiTJUUcdlbe+9a058sgjc+65547873L5CgBgRlu2bFk+/vGP5+tf/3rWr1+fQw45JIsXL87SpUvzvve9L/vuu2+uueaavP71r88VV1yRJFm5cmWuvvrq3HzzzTnxxBPz8pe/PJdeemluueWWXHfddbnrrruy//775/TTT8+6devyxje+MZdddlnmz5+fj3zkI/mjP/qjfOADH0iS3H///fnSl740lr9NiAEAM9rVV1+dk046KTvuuGOS5IQTTsjatWvzla98Jaeccsqjz3vooYcefXzyySfnKU95Svbff//cddddSZIvf/nLOfXUU7PNNtvk2c9+do4++ugkyS233JLrr78+xxxzTJLk4Ycfzp577vnoe73yla8c298mxACAGa219rh9jzzySHbZZZdce+21m3zNDjvssMnXb+pyE621HHDAAfnqV7+6yffaaaedhh152pwjBgDMaC960Yvy6U9/OmvXrs2aNWvy2c9+Nk996lOzaNGifOxjH0syFVPf+MY3fuL7HHHEEbn44ovz8MMPZ+XKlbnyyiuTJPvtt19Wr179aIitW7cuN9xww3j/qAEhBgDMaIceemhOPPHEHHTQQfm1X/u1LFmyJM94xjNy4YUX5vzzz89BBx2UAw44IJdddtlPfJ+Xvexl2XfffXPggQfmda97XY488sgkyfbbb59LLrkkZ599dg466KAcfPDB+cpXvrI1/rTUppb7ZqIlS5a0ZcuW9R4DABijm266Kc973vMet3/NmjV52tOelh/96Ec54ogjct555+WQQw7pMOHjbWrmqlreWluyudc6RwwAmPGWLl2aG2+8MWvXrs1pp502YyLsyRJic8xZZ52VVatWZY899sg555zTexwAmJYPf/jDvUcYCyE2x6xatSp33nln7zEAgDhZHwCgGyEGANCJEAMA6MQ5YgDAjLX4zR8c6fst//Pf2uxzttlmmxx44IGPbn/yk5/MwoULRzrHBkIMAGAjO+644xPeOmnUHJoEAOjEihgAwEYefPDBHHzwwUmSRYsW5dJLLx3bZwkxAICNODQJADAHCDEAgE4cmgQAZqzpXG5iNrMiBgCwkTVr1my1zxJiAACdCDEAgE6EGABAJ0IMAKATIQYA0IkQAwDoxHXEAIAZ6453HjjS99v7bddt9jlVlVe/+tX50Ic+lCRZv3599txzzxx22GH5zGc+M9J5rIgBAGxkp512yvXXX58HH3wwSXL55Zdnr732GstnCTEAgMc47rjj8tnPfjZJctFFF+XUU08dy+cIMQCAx3jVq16Viy++OGvXrs03v/nNHHbYYWP5HOeIAcAcd9ZZZ2XVqlXZY489cs455/QeZ0Z4/vOfn9tvvz0XXXRRXvrSl47tc8a+IlZVv19VN1TV9VV1UVXNq6pFVXVNVd1aVR+pqu3HPQcAsGmrVq3KnXfemVWrVvUeZUY58cQT86Y3vWlshyWTMYdYVe2V5IwkS1prP5dkmySvSvLuJH/RWts3yfeTvHaccwAADOv000/P2972thx44Gi/ubmxrXFoctsk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
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmIAAAHjCAYAAACAUnMGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAG/9JREFUeJzt3Xu0nXV95/HPV25BpCCQCpJiQoeiMFwkoVhKgWqpgBWwI1VaLRY7rGoVpq1ix3aq1c6skbqmZXVNVabYQQdBRREVR8vioqVa2kRR7vVSxWACAcQhSjCB3/xxNphCMGfDefI7Z5/Xa62ss/ezb9/DH2e9+T3Pfp5qrQUAgC3vKb0HAACYr4QYAEAnQgwAoBMhBgDQiRADAOhEiAEAdCLEAAA6EWIAAJ0IMQCATrbuPcB07bbbbm3x4sW9xwAA2KwVK1bc1VpbuLnnzZkQW7x4cZYvX957DACAzaqqb03neXZNAgB0IsQAADoRYgAAncyZY8QAgMm3fv36rFy5MuvWres9yrQsWLAgixYtyjbbbPOEXi/EAIBZY+XKldlxxx2zePHiVFXvcX6s1lruvvvurFy5MkuWLHlC72HXJAAwa6xbty677rrrrI+wJKmq7Lrrrk9q9U6IAQCzylyIsIc92VmFGABAJ0IMAJiXXvWqV+Xiiy/uOoMQAwCYhg0bNsz4ewoxAGDWe/vb355nP/vZOeaYY3LKKafkne98Z77+9a/n2GOPzdKlS/MLv/ALueWWW5JMrXSdccYZOfzww7P33ns/surVWsvrXve67LfffnnRi16UO++885H3X7FiRY466qgsXbo0L3zhC7Nq1aokydFHH503v/nNOeqoo3LOOefM+O/l9BUAwKy2fPnyfOQjH8mXvvSlbNiwIYccckiWLl2a008/Pe9+97uzzz775Nprr81rX/vaXHnllUmSVatW5Zprrsktt9ySE044IS996UtzySWX5NZbb83111+fO+64I/vtt19OO+20rF+/Pq9//etz6aWXZuHChfngBz+YP/qjP8p73/veJMm9996bz372s4P8bkIMAJjVrrnmmpx44onZfvvtkyQvfvGLs27dunz+85/PySef/MjzHnjggUdun3TSSXnKU56S/fbbL3fccUeS5HOf+1xOOeWUbLXVVnnmM5+Z5z//+UmSW2+9NTfccEOOOeaYJMmDDz6YPfbY45H3etnLXjbY7ybEAIBZrbX2mG0PPfRQdt5551x33XWbfM122223yddv6nQTrbXsv//++cIXvrDJ99phhx3GHXnaHCMGAMxqRxxxRD7xiU9k3bp1Wbt2bS677LI89alPzZIlS/LhD384yVRMffnLX/6x73PkkUfmoosuyoMPPphVq1blqquuSpLsu+++WbNmzSMhtn79+tx4443D/lIjQgwAmNUOPfTQnHDCCTnooIPyq7/6q1m2bFl22mmnXHDBBTnvvPNy0EEHZf/998+ll176Y9/nJS95SfbZZ58ccMABec1rXpOjjjoqSbLtttvm4osvzpve9KYcdNBBOfjgg/P5z39+S/xqqU0t981Gy5Yta8uXL+89BgAwoJtvvjnPec5zHrN97dq1edrTnpYf/OAHOfLII3PuuefmkEMO6TDhY21q5qpa0VpbtrnXOkYMAJj1Tj/99Nx0001Zt25dTj311FkTYU+WEJtnzjrrrKxevTq77757zj777N7jAMC0fOADH+g9wiCE2DyzevXq3H777b3HAADiYH0AgG6EGABAJ0IMAKATx4gBALPW0je+b0bfb8Wf/+Zmn7PVVlvlgAMOeOT+xz72sSxevHhG53iYEAMA2Mj222//uJdOmml2TQIAdGJFDABgI/fff38OPvjgJMmSJUtyySWXDPZZQgwAYCN2TQIAzANCDACgE7smAYBZazqnm5jLrIgBAGxk7dq1W+yzhBgAQCdCDACgEyEGANCJEAMA6ESIAQB0IsQAADpxHjEAYNa67W0HzOj77fUn12/2OVWVV7ziFXn/+9+fJNmwYUP22GOPHHbYYfnkJz85o/NYEQMA2MgOO+yQG264Iffff3+S5PLLL8+ee+45yGcJMQCARznuuONy2WWXJUkuvPDCnHLKKYN8jhADAHiUl7/85bnooouybt26fOUrX8lhhx02yOc4RgwA5rmzzjorq1evzu67756zzz679zizwoEHHphvfvObufDCC3P88ccP9jlCDADmudWrV+f222/vPcasc8IJJ+QNb3hDrr766tx9992DfMbgIVZVv5fkt5O0JNcn+a0keyS5KMkuSb6Y5JWttR8OPQsAwHSddtpp2WmnnXLAAQfk6quvHuQzBg2xqtozyRlJ9mut3V9VH0ry8iTHJ/mL1tpFVfXuJK9O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
 "
 >
 </div>
@@ -14386,45 +14386,10 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">&#39;sessionId&#39;</span><span class="p">,</span><span class="s1">&#39;page&#39;</span><span class="p">,</span><span class="s1">&#39;new_ts&#39;</span><span class="p">,</span><span class="s2">&quot;userId&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">sessionId</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;new_ts&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s1">&#39;userID&#39;</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>DataFrame[sessionId: bigint, page: string, new_ts: string, userId: string]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check the shape of df</span>
-<span class="n">df_check2</span> <span class="o">=</span> <span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
-<span class="n">df_check2</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="s1">&#39;sessionId&#39;</span><span class="p">,</span><span class="s1">&#39;page&#39;</span><span class="p">,</span><span class="s1">&#39;new_ts&#39;</span><span class="p">,</span><span class="s2">&quot;userId&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">sessionId</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s1">&#39;new_ts&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s1">&#39;userID&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -14443,7 +14408,7 @@ only showing top 5 rows
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(278154, 21)</pre>
+<pre>DataFrame[sessionId: bigint, page: string, new_ts: string, userId: string]</pre>
 </div>
 
 </div>
@@ -14455,6 +14420,41 @@ only showing top 5 rows
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check the shape of df</span>
+<span class="n">df_check2</span> <span class="o">=</span> <span class="n">df_cncl_Churn</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<span class="n">df_check2</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(278154, 21)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#data frame of the counts per page</span>
@@ -14502,7 +14502,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#some other stats</span>
@@ -14644,7 +14644,7 @@ max            1.000000        2.000000    36.000000  163.000000   8.000000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#pivot feature : page</span>
@@ -14699,7 +14699,7 @@ max            1.000000        2.000000    36.000000  163.000000   8.000000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Feature 1 : Unique Artist Count</span>
@@ -14743,7 +14743,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Feature 2 : Gender</span>
@@ -14791,7 +14791,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Feature 3 : Number of unique songs listened</span>
@@ -14835,7 +14835,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Feature 4 : Total number of events</span>
@@ -14879,7 +14879,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Feature 5 : Total time since registration</span>
@@ -14926,7 +14926,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Feature 6 : Total number of artists the user has listened to</span>
@@ -14979,7 +14979,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">feature_eng</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -15046,7 +15046,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_data</span><span class="o">=</span> <span class="n">feature_eng</span><span class="p">(</span><span class="n">df_updated</span><span class="p">)</span>
@@ -15059,7 +15059,7 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_data</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -15100,12 +15100,12 @@ only showing top 5 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># checking for any null values</span>
 <span class="n">columns_del</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">]</span>
-<span class="n">df_feature</span><span class="o">=</span> <span class="n">final_data</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns_del</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_feature</span> <span class="o">=</span> <span class="n">final_data</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns_del</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">df_feature</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
@@ -15119,7 +15119,7 @@ only showing top 5 rows
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -15159,7 +15159,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#vectorizing all features</span>
@@ -15182,7 +15182,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -15208,7 +15208,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Standardizing all input features i.e. Scaler all features</span>
@@ -15223,7 +15223,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Now we have our data to train a machine learning model</span>
@@ -15290,7 +15290,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#split the data in train and test data</span>
@@ -15302,9 +15302,26 @@ only showing top 20 rows
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I chose them as they are best suited for Supervised Learning Binary Classification problems. To get the performance of the model, in binary classification we have "Confusion Metrix" which consists True Positive, True Negative, False Positive and False Negative. Accuracy and F1-score are derived from this metric in order to calculate the performance of the model.</p>
+
+<pre><code>**Accuracy = (TP + TN)/ (TP+TN+FP+FN)  →
+It is basically a measure of all the correctly classified points. If all the points are correctly classified we will get good Accuracy but it has shortcomings also. When   dataset are improper, the prediction can't be right which will be deriving from accuracy.
+
+**F1-score = 2*P*R/(P+R) where P (Precision) = TP/(TP+FP), R(recall) = TP/(TP+FN) --&gt;
+ It take care of both Precision and Recall which basically tells us that how the output of model is useful and how complete the output are respectively. So F1-score        helps Accuracy or complements it incase the points are incorrectly classified.
+
+</code></pre>
+<p>In order to support Accuracy, I used F1-score. Because both can take care of correctly and incorrectly classified points collectively. However, main parameter for this experiment is F1-score.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#method Random Forest Classifier</span>
@@ -15342,10 +15359,10 @@ only showing top 20 rows
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1601564700.749827
-Total time taken in training and prediction in seconds:  295.40548968315125
-F1 Score for Random Forest Classifier is 0.6435087719298245
-The accuracy for Random Forest Classifier is 0.68
+<pre>1601871629.0763152
+Total time taken in training and prediction in seconds:  297.50581884384155
+F1 Score for Random Forest Classifier is 0.706
+The accuracy for Random Forest Classifier is 0.76
 </pre>
 </div>
 </div>
@@ -15394,9 +15411,10 @@ The accuracy for Random Forest Classifier is 0.68
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Total time taken in training and prediction in seconds:  130.5927119255066
-F1 Score for Logistic Regression is 0.6743123543123543
-The accuracy for Logistic Regression is 0.72
+<pre>1601872207.0394487
+Total time taken in training and prediction in seconds:  323.0742998123169
+F1 Score for Logistic Regression is 0.9592380952380952
+The accuracy for Logistic Regression is 0.96
 </pre>
 </div>
 </div>
@@ -15407,7 +15425,7 @@ The accuracy for Logistic Regression is 0.72
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># method Gradient Boosted Trees</span>
@@ -15445,8 +15463,8 @@ The accuracy for Logistic Regression is 0.72
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1601566098.7404945
-Total time taken in training and prediction in seconds:  449.2180905342102
+<pre>1601872801.6463344
+Total time taken in training and prediction in seconds:  435.00629568099976
 F1 Score for Gradient Boosted Trees is 0.613056133056133
 The accuracy for Gradient Boosted Trees is 0.64
 </pre>
@@ -15460,8 +15478,9 @@ The accuracy for Gradient Boosted Trees is 0.64
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In above results from 3 different methods we could see that the f1-score and accuracy of Logistic Regression method is better compared to other 2. But it took a lot of computation time than others. It will be more if the size of dataset is larger.</p>
-<p>Logistic Regression took more computation time compared to others but its accuracy and f1-socre is competitive. So we will proceed with LR and will try to tune this model.</p>
+<p>In above results from 3 different methods we could see that the f1-score and accuracy of Logistic Regression method is much much better compared to other 2. It however took a bit more training and prediction time than Random Forest method. It will be taking more computation time if the size of dataset is larger.</p>
+<p>Next step is to tune and optimize Random Forest and Gradient Boosting Tree models and see how do they fare with respect to accuracy and F1-score metrics of Logistic Regression output. I will compare the result of tuned model against LR and see which one is doing better.</p>
+<p>As of now LR is performing way better than other 2 models.</p>
 
 </div>
 </div>
@@ -15475,31 +15494,33 @@ The accuracy for Gradient Boosted Trees is 0.64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#tuning Logistic regression model</span>
-<span class="n">model_lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">maxIter</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">paramGrid</span> <span class="o">=</span> <span class="n">ParamGridBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">model_lr</span><span class="o">.</span><span class="n">elasticNetParam</span><span class="p">,[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span>\
-                                <span class="n">addGrid</span><span class="p">(</span><span class="n">model_lr</span><span class="o">.</span><span class="n">regParam</span><span class="p">,[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">])</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#tuning Random Forest model with help of GridSearch</span>
+<span class="n">model_RF</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="n">ParamGridBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">model_RF</span><span class="o">.</span><span class="n">impurity</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="s1">&#39;entropy&#39;</span><span class="p">])</span> \
+                                <span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">model_RF</span><span class="o">.</span><span class="n">maxDepth</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span> \
+                                <span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">model_RF</span><span class="o">.</span><span class="n">numTrees</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">85</span><span class="p">])</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
 
-<span class="n">lr_evals</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">metricName</span><span class="o">=</span><span class="s1">&#39;f1&#39;</span><span class="p">)</span>
+<span class="n">rf_evals</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">metricName</span><span class="o">=</span><span class="s1">&#39;f1&#39;</span><span class="p">)</span>
 
-<span class="n">model_lr_output</span> <span class="o">=</span> <span class="n">CrossValidator</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">model_lr</span><span class="p">,</span> <span class="n">estimatorParamMaps</span><span class="o">=</span><span class="n">paramGrid</span><span class="p">,</span> <span class="n">evaluator</span><span class="o">=</span><span class="n">lr_evals</span><span class="p">,</span>
-                                 <span class="n">numFolds</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">model_RF_output</span> <span class="o">=</span> <span class="n">CrossValidator</span><span class="p">(</span><span class="n">estimator</span> <span class="o">=</span> <span class="n">model_RF</span><span class="p">,</span> <span class="n">estimatorParamMaps</span> <span class="o">=</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">evaluator</span> <span class="o">=</span> <span class="n">rf_evals</span><span class="p">,</span>
+                         <span class="n">numFolds</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
 <span class="c1">#start training time</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
 <span class="c1">#training the model</span>
-<span class="n">tuned_LR</span> <span class="o">=</span> <span class="n">model_lr_output</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="n">tuned_RF</span> <span class="o">=</span> <span class="n">model_RF_output</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
 
 <span class="c1">#prediction</span>
-<span class="n">final_LR</span> <span class="o">=</span> <span class="n">tuned_LR</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="n">final_RF</span> <span class="o">=</span> <span class="n">tuned_RF</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
 
 <span class="c1">#end time</span>
 <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total time in Training and Predicting: &#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total time in Training and Predicting of tuned Random Forest method is : &#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -15515,23 +15536,8 @@ The accuracy for Gradient Boosted Trees is 0.64
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Exception ignored in: &lt;object repr() failed&gt;
-Traceback (most recent call last):
-  File &#34;/opt/spark-2.4.3-bin-hadoop2.7/python/pyspark/ml/wrapper.py&#34;, line 40, in __del__
-    if SparkContext._active_spark_context and self._java_obj is not None:
-AttributeError: &#39;LogisticRegression&#39; object has no attribute &#39;_java_obj&#39;
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>total time in Training and Predicting:  6516.405846834183
+<pre>total time in Training and Predicting of tuned Random Forest method is :  3946.8829884529114
 </pre>
 </div>
 </div>
@@ -15542,17 +15548,17 @@ AttributeError: &#39;LogisticRegression&#39; object has no attribute &#39;_java_
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#evaluation metrics for tuned Logical regression</span>
-<span class="n">eval_metrics_lr</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">predictionCol</span> <span class="o">=</span> <span class="s2">&quot;prediction&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#evaluation metrics for tuned Random Forest</span>
+<span class="n">eval_metrics_RF</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">predictionCol</span> <span class="o">=</span> <span class="s2">&quot;prediction&quot;</span><span class="p">)</span>
 
-<span class="c1">#The metrics for tuned Logistic regression</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy for tuned Logistic regression is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">eval_metrics_lr</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">final_LR</span><span class="p">,</span> 
-                                                        <span class="p">{</span><span class="n">eval_metrics_lr</span><span class="o">.</span><span class="n">metricName</span> <span class="p">:</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">})))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The F-1 Score for tuned Logistic regression is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">eval_metrics_lr</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">final_LR</span><span class="p">,</span> 
-                                                        <span class="p">{</span><span class="n">eval_metrics_lr</span><span class="o">.</span><span class="n">metricName</span> <span class="p">:</span> <span class="s2">&quot;f1&quot;</span><span class="p">})))</span>
+<span class="c1">#The metrics for tuned Random Forest</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy for tuned Random Forest is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">eval_metrics_RF</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">final_RF</span><span class="p">,</span> 
+                                                        <span class="p">{</span><span class="n">eval_metrics_RF</span><span class="o">.</span><span class="n">metricName</span> <span class="p">:</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">})))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The F-1 Score for tuned Random Forest is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">eval_metrics_RF</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">final_RF</span><span class="p">,</span> 
+                                                        <span class="p">{</span><span class="n">eval_metrics_RF</span><span class="o">.</span><span class="n">metricName</span> <span class="p">:</span> <span class="s2">&quot;f1&quot;</span><span class="p">})))</span>
 </pre></div>
 
     </div>
@@ -15569,8 +15575,99 @@ AttributeError: &#39;LogisticRegression&#39; object has no attribute &#39;_java_
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The accuracy for tuned Logistic regression is 0.72
-The F-1 Score for tuned Logistic regression is 0.6743123543123543
+<pre>The accuracy for tuned Random Forest is 0.64
+The F-1 Score for tuned Random Forest is 0.5812587412587413
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#tuning Graident Boosted Tree model</span>
+<span class="n">model_GB</span> <span class="o">=</span> <span class="n">GBTClassifier</span><span class="p">(</span><span class="n">maxIter</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="n">ParamGridBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">model_GB</span><span class="o">.</span><span class="n">maxDepth</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span><span class="o">.</span><span class="n">addGrid</span><span class="p">(</span><span class="n">model_GB</span><span class="o">.</span><span class="n">maxIter</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+
+<span class="n">gb_evals</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">metricName</span><span class="o">=</span><span class="s1">&#39;f1&#39;</span><span class="p">)</span>
+
+<span class="n">model_GB_output</span> <span class="o">=</span> <span class="n">CrossValidator</span><span class="p">(</span><span class="n">estimator</span> <span class="o">=</span> <span class="n">model_GB</span><span class="p">,</span> <span class="n">estimatorParamMaps</span> <span class="o">=</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">evaluator</span> <span class="o">=</span> <span class="n">gb_evals</span><span class="p">,</span>
+                         <span class="n">numFolds</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">#start training time</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="c1">#training the model</span>
+<span class="n">tuned_GB</span> <span class="o">=</span> <span class="n">model_GB_output</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+
+<span class="c1">#prediction</span>
+<span class="n">final_GB</span> <span class="o">=</span> <span class="n">tuned_GB</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+
+<span class="c1">#end time</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total time in Training and Predicting of tuned Gradient Bossted tree method is : &#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>total time in Training and Predicting of tuned Gradient Bossted tree method is :  7248.842734575272
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#evaluation metrics for tuned Gradient Bossted tree</span>
+<span class="n">eval_metrics_GB</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">predictionCol</span> <span class="o">=</span> <span class="s2">&quot;prediction&quot;</span><span class="p">)</span>
+
+<span class="c1">#The metrics for tuned Gradient Bossted tree</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy for tuned Gradient Bossted tree is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">eval_metrics_GB</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">final_GB</span><span class="p">,</span> 
+                                                        <span class="p">{</span><span class="n">eval_metrics_GB</span><span class="o">.</span><span class="n">metricName</span> <span class="p">:</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">})))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The F-1 Score for tuned Gradient Bossted tree is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">eval_metrics_GB</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">final_GB</span><span class="p">,</span> 
+                                                        <span class="p">{</span><span class="n">eval_metrics_GB</span><span class="o">.</span><span class="n">metricName</span> <span class="p">:</span> <span class="s2">&quot;f1&quot;</span><span class="p">})))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The accuracy for tuned Gradient Bossted tree is 0.72
+The F-1 Score for tuned Gradient Bossted tree is 0.6743123543123543
 </pre>
 </div>
 </div>
@@ -15582,6 +15679,16 @@ The F-1 Score for tuned Logistic regression is 0.6743123543123543
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>Among 3 tried methods in this project and after tuning hyperparameters of model in order to improve their performances I can see Logistic Regression performed much better than other 2 algorithms.
+It produces Accuracy and F1 Score of 96% approx.</p>
+<p>Since the engineered features were less, approx 225, it is still difficult to say that this conclusion will stand true in general. It might changes with large dataset but still the winner among three selected models is Logistic Regression for this project.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Final-Steps">Final Steps<a class="anchor-link" href="#Final-Steps">&#182;</a></h1><p>Clean up your code, adding comments and renaming variables to make the code easier to read and maintain. Refer to the Spark Project Overview page and Data Scientist Capstone Project Rubric to make sure you are including all components of the capstone project and meet all expectations. Remember, this includes thorough documentation in a README file in a Github repository, as well as a web app or blog post.</p>
 
 </div>
@@ -15589,7 +15696,7 @@ The F-1 Score for tuned Logistic regression is 0.6743123543123543
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!!</span>jupyter nbconvert *.ipynb
@@ -15605,14 +15712,14 @@ The F-1 Score for tuned Logistic regression is 0.6743123543123543
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>[&#39;[NbConvertApp] Converting notebook Sparkify.ipynb to html&#39;,
- &#39;[NbConvertApp] Writing 548315 bytes to Sparkify.html&#39;,
+ &#39;[NbConvertApp] Writing 556382 bytes to Sparkify.html&#39;,
  &#39;[NbConvertApp] Converting notebook Sparkify-zh.ipynb to html&#39;,
  &#39;[NbConvertApp] Writing 279513 bytes to Sparkify-zh.html&#39;]</pre>
 </div>
